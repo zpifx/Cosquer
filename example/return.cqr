@@ -1,0 +1,11 @@
+. This is a comment, they cannot be on a line with code .
+.They have to start and end with periods. As long as it starts and ends with one, it is valid.
+
+. This declares that the program is called "ReturnExample" .
+program ReturnExample;
+
+. This is the "main" function of the program, it always runs first .
+function Start(VOID) : INT64 {
+. This returns a value of "0", which is a successful execution .
+	return 0;
+}

@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+	if (argc < 2) {
+		printf("Too few arguments!\n");
+		return -1;
+	}
+	
+	FILE *ptrInputFile;
+
+	
+
+	return 0;
+}
