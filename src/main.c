@@ -4,8 +4,9 @@
 #define MAX_FILE_READ		4096
 
 char *ReadFile(const char *fpath) {
-
 	FILE *fptr;
+	long size;
+	char *buffer;
 
 	fptr = fopen(fpath, "r");
 	if (!fptr) {
@@ -14,10 +15,10 @@ char *ReadFile(const char *fpath) {
 	}
 
 	fseek(fptr, 0, SEEK_END);
-	long size = ftell(fptr);
+	size = ftell(fptr);
 	rewind(fptr);
 
-	char *buffer = malloc(size + 1);
+	buffer = malloc(size + 1);
 	fread(buffer, 1, size, fptr);
 	buffer[size] = '\0';
 	fclose(fptr);
@@ -27,12 +28,14 @@ char *ReadFile(const char *fpath) {
 
 
 int main(int argc, char *argv[]) {
+	char *fileData;
+	
 	if (argc < 2) {
 		printf("Too few arguments!\n");
 		exit(1);
 	}
 	
-	char *fileData = ReadFile(argv[1]);
+	fileData = ReadFile(argv[1]);
 	
 	printf("%s", fileData);
 
