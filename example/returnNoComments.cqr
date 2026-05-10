@@ -1,5 +1,5 @@
-program ReturnExample;
+program ReturnExample
 
 function Start(VOID) : INT64 {
-	return 0;
+	return 0
 }
