@@ -1,0 +1,14 @@
+. This program uses the system library, which would be saved .
+. by default at /usr/lib/cosquer/system.cql                  .
+
+program PrintExample
+
+use System
+
+func Start(VOID) : INT64
+do
+	System::Write(1, "Hello, World!\n", 14)
+	return 0
+end
+
+endprogram PrintExample

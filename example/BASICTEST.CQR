@@ -1,5 +1,0 @@
-program ReturnExample
-
-function Start(VOID) : INT64 {
-	return 0
-}

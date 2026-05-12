@@ -1,0 +1,9 @@
+program BasicExample
+
+. The function does not need a "do/end" statement, .
+. as it is only one line of execution              .
+
+function Start(VOID) : INT64
+	return 0
+
+endprogram BasicExample
